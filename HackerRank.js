@@ -20,17 +20,22 @@ function readLine() {
 }
 
 /////////////// ignore above this line ////////////////////
-
 function main() {
     var N = parseInt(readLine());
-    if (N % 2 !== 0) {
-        console.log("Weird");
-    }else if (N % 2 === 0 && N >=2 && N <= 5) {
-        console.log("Not Weird");
-    }else if (N % 2 === 0 && N >= 6 && N <= 20) {
-        console.log("Weird");
-    }else if (N % 2 === 0 && N > 20) {
-        console.log("Not Weird");
-    };    
-};
+    //Original Code
+    // if (N % 2 !== 0) {
+      //      console.log("Weird");
+      //  }else if (N % 2 === 0 && N >=2 && N <= 5) {
+      //      console.log("Not Weird");
+      //  }else if (N % 2 === 0 && N >= 6 && N <= 20) {
+      //      console.log("Weird");
+      //  }else if (N % 2 === 0 && N > 20) {
+      //      console.log("Not Weird");
+      //  };    
+        
+    //Re-Factored Code using the Ternary Operator
+        (N % 2 === 0 && ((N > 20) || ((N >= 2) && (N <= 5) ))) ?
+            console.log("Not Weird") : console.log("Weird");
+        }
+
 
